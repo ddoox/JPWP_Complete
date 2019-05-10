@@ -99,12 +99,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 {
                     for (Location location : locationResult.getLocations())
                     {
-                        //przypisanie nowej lokalizaji do naszej zmiennej
+                        //przypisanie nowej lokalizaji do naszych zmiennych
                         AktualnaPozycjaLocation = location;
-
-                        //zmiana pozycji głównego markera
                         AktualnaPozycjaWspolrzedneLatLang = new LatLng(AktualnaPozycjaLocation.getLatitude(), AktualnaPozycjaLocation.getLongitude());
-                        AktualnaPozycjaMarker.setPosition(AktualnaPozycjaWspolrzedneLatLang);
 
                         // Zad 6 - aktualizacja pól tekstowych
                         textview2.setText(Double.toString(AktualnaPozycjaLocation.getLatitude()));
